@@ -1,19 +1,35 @@
-global:
-  ingressSubdomain: <dev-cluster-name>.us-south.containers.appdomain.cloud
-  tlsSecretName: <dev-cluster-name>
-
-# replace <app-chart-name> with the value given in requirements.yaml
-<app-chart-name>:
-  # provides values from the values.yaml in the <app-chart-name> helm chart
-  replicaCount: 1
-  
-  # For OpenShift set route.enabled=true
-  # For Kubernetes set route.enabled=false
-  route:
-    enabled: true
-  
-  # For OpenShift set ingress.enabled=false
-  # For Kubernetes set ingress.enabled=true
-  ingress:
+# Default values for template-node-typescript.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+global: {}
+replicaCount: 1
+logLevel: "debug"
+image:
+  repository: de.icr.io/workshop-team-one/template-node-cshell
+  tag: 0.0.2
+  pullPolicy: IfNotPresent
+  port: 3000
+nameOverride: template-node-cshell
+fullnameOverride: template-node-cshell
+service:
+  type: ClusterIP
+  port: 80
+route:
+  enabled: true
+ingress:
+  enabled: false
+  appid:
     enabled: false
-    tlsSecretName: <dev-cluster-name>
+    # web or app - https://cloud.ibm.com/docs/services/appid?topic=appid-kube-auth
+    requestType: web
+    #  host: hello
+  namespaceInHost: true
+  subdomain: containers.appdomain.cloud
+  path: "/"
+#  tlsSecretName: ""
+vcsInfo:
+  repoUrl: https://github.com/RamyaRaghuveera/template-node-cshell.git
+  branch: c7af53cd943ef4d40c0be52d203bab00beaf2e14
+partOf: ""
+connectsTo: ""
+runtime: js

@@ -1,4 +1,5 @@
-version: 0.1.0
-name: app-helm
 apiVersion: v1
-description: Template configuration for a helm-based ArgoCD install. Copy this folder then update the values in requirements.yaml and values.yaml
+appVersion: "1.0"
+description: A Helm chart for Node React CShell
+name: template-node-cshell
+version: 0.0.2
