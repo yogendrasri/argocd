@@ -3,4 +3,3 @@ appVersion: "1.0"
 description: A Helm chart for Node React CShell
 name: template-node-cshell
 version: 0.0.2
-
