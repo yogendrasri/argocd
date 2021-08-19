@@ -5,7 +5,7 @@ global: {}
 replicaCount: 1
 logLevel: "debug"
 image:
-  repository: de.icr.io/workshop-team-one/template-node-cshell
+  repository: us.icr.io/workshop-team-two/template-node-cshell
   tag: 0.0.2
   pullPolicy: IfNotPresent
   port: 3000

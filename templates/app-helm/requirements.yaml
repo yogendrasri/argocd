@@ -1,6 +1,5 @@
 dependencies:
 - name: template-node-cshell
   version: 0.0.2
-  repository: https://artifactory-tools.workshop-ocp46-one-bb0dafd08526894d1a8ae848e8bd8099-0000.us-south.containers.appdomain.cloud/artifactory/generic-local/workshop-team-one
-
+  repository: https://artifactory-tools.workshop-ocp46-two-bb0dafd08526894d1a8ae848e8bd8099-0000.us-east.containers.appdomain.cloud/artifactory/generic-local/workshop-team-two
 
